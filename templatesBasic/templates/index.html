@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>Blog Django do Ione</title>
+<link 
+</head>
+<body style="background:gray;font-family:bold;font:blue">
+<h1>
+<div style="border-radius:20px;position:absolute;top:4%;left:24%;width:90%;border:2px black solid;height:60px;margin-left:-250px;margin-top:-1px;text-align:center;background:blue;font-size:200%">
+ Blog em Django do Ione</div>
+</h1>
+
+<div style="position:absolute;top:38%;left:50%;width:70%;height:auto;margin-left:-450px;margin-top:-100px;text-align:center;"> 
+
+{% if  post %}
+{% for post in post %}
+<div style="border: 2px black solid; margin-bottom:5px;border-radius:20px;background:white">
+<h1 style="background:gray;border-top:2px black solid;border-bottom:2px black solid">{{ post.titulo }}<h1>
+<h3 >{{ post.postagem }}<h3 	>
+<p style="background:gray;font-size:12px"> Data da publicação : {{ post.data }}<p>
+</div>
+{% endfor %}
+
+<h3>
+<div style="margin-bottom:20px;background:blue;border: 2px black solid;border-radius:20px">
+<a style="border-radius:20px;width:90%;height:90px;top:10%;left:24%;margin-left:-250px;margin-top:-10px;margin-bottom:0;text-align:center;color:black;text-decoration:none"
+ rel="license" href="#"><br><img alt="Licenca Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/3.0/br/88x31.png"/><br>Ionedorap 2014</a></h3> 
+
+ <img width="200px" height="50px" src="/media/powered_by.png"/>
+ </div>
+
+{% endif %}
+
+</div>
+
+
+ </body>
+</html>
